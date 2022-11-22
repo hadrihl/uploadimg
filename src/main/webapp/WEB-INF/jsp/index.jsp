@@ -42,14 +42,14 @@
     	<div class="container py-5" modelattribute="user">
     		<h2 class="text-muted">${user.username} {${user.id}}</h2>
     		<div class="card" style="width: 18rem;">
-    			<c:if test="${empty user}">
+    			<c:if test="${empty user.imageFile}">
 	    		<svg class="bd-placeholder-img card-img-top" width="18rem" height="20rem" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
 					<rect width="100%" height="100%" fill="#868e96"></rect>
 				  	<text x="20%" y="50%" fill="#dee2e6">Upload your profile image</text>
 				</svg>
 				</c:if>
 				
-				<c:if test="${not empty user}">
+				<c:if test="${not empty user.imageFile}">
 				<img src="assets/img/${user.imageFile}" class="card-img-top img-fluid" width="18rem" height="20rem">
 				</c:if>
     		</div>
